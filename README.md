@@ -4,19 +4,19 @@
 
 There is at least one problem in my code that I don't quite understand how to fix, unfortunately. When I try to convert HTML with two or more exact same tags, I don't receive the expected "content" in return.
 
-For example, this is HTML I want to convert: <div><div>Hello</div></div>.
+For example, this is HTML I want to convert: `<div><div>Hello world!</div></div>`.
 
 And this is data I receive in return:
-[
-{
-"tagType": "div",
-"content": [
-{
-"tagType": "div"
-}
-]
-}
-]
+`[
+  {
+    "tagType": "div",
+    "content": [
+      {
+        "tagType": "div"
+      }
+    ]
+  }
+]`
 
 This is not exactly what I should have received.
 
