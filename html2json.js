@@ -19,21 +19,21 @@ function html2json(htmlText) {
         const nestedTag = html2json(tagContent);
 
         jsonData.push({
-          tagType: tag[1],
-          attribute: tag[2],
-          content: nestedTag,
+          tagType: tag[1] || null,
+          attribute: tag[2] || null,
+          content: nestedTag || null,
         });
       } else {
         jsonData.push({
-          tagType: tag[1],
-          attribute: tag[2],
-          content: tagContent?.trim(),
+          tagType: tag[1] || null,
+          attribute: tag[2] || null,
+          content: tagContent?.trim() || null,
         });
       }
     } else if (tag[4]) {
       jsonData.push({
-        tagType: tag[4],
-        attribute: tag[5],
+        tagType: tag[4] || null,
+        attribute: tag[5] || null,
       });
     }
   }
